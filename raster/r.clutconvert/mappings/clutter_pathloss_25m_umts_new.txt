@@ -1,0 +1,27 @@
+# Terrain type loss factors - hataDEM model - Slovenia 25m, UMTS, 2011-12-13
+#   1 - Urban without buildings
+#   2 - Suburb
+#   3 - Urban
+#   4 - Dense urban
+#   5 - Agricultural area
+#   6 - Forest
+#   7 - Swamp
+#   8 - Dry open with vegetation
+#   9 - Open without vegetation
+#  10 - Water
+#  11 - Industrial area
+#  12 - Park
+
+1:5
+2:15
+3:13
+4:28
+5:12
+6:20
+7:15
+8:8
+9:5
+10:1
+11:20
+12:8
+

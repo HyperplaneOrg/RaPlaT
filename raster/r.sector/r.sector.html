@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>GRASS GIS manual: r.sector</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="grassdocs.css" type="text/css">
+</head>
+<body bgcolor="white">
+<div id="container">
+
+<a href="index.html"><img src="grass_logo.png" alt="GRASS logo"></a>
+<hr class="header">
+
+<h2>NAME</h2>
+<em><b>r.sector</b></em>  - RaPlaT - Sector module (v06dec2018)
+<h2>KEYWORDS</h2>
+<a href="raster.html">raster</a>, <a href="topic_directional_diagram.html">directional diagram</a>, <a href="keywords.html#antenna sector">antenna sector</a>
+<h2>SYNOPSIS</h2>
+<div id="name"><b>r.sector</b><br></div>
+<b>r.sector --help</b><br>
+<div id="synopsis"><b>r.sector</b> [-<b>q</b>] <b>pathloss_raster</b>=<em>name</em> <b>input_dem</b>=<em>name</em> <b>output</b>=<em>name</em> <b>east</b>=<em>float</em> <b>north</b>=<em>float</em>  [<b>radius</b>=<em>float</em>]  <b>ant_data_file</b>=<em>string</em> <b>height_agl</b>=<em>float</em> <b>beam_direction</b>=<em>integer</em> <b>mech_tilt</b>=<em>integer</em>  [<b>rx_ant_height</b>=<em>float</em>]   [--<b>overwrite</b>]  [--<b>help</b>]  [--<b>verbose</b>]  [--<b>quiet</b>]  [--<b>ui</b>] 
+</div>
+
+<div id="flags">
+<h3>Flags:</h3>
+<dl>
+<dt><b>-q</b></dt>
+<dd>Quiet</dd>
+
+<dt><b>--overwrite</b></dt>
+<dd>Allow output files to overwrite existing files</dd>
+<dt><b>--help</b></dt>
+<dd>Print usage summary</dd>
+<dt><b>--verbose</b></dt>
+<dd>Verbose module output</dd>
+<dt><b>--quiet</b></dt>
+<dd>Quiet module output</dd>
+<dt><b>--ui</b></dt>
+<dd>Force launching GUI dialog</dd>
+</dl>
+</div>
+
+<div id="parameters">
+<h3>Parameters:</h3>
+<dl>
+<dt><b>pathloss_raster</b>=<em>name</em>&nbsp;<b>[required]</b></dt>
+<dd>Name of isotropic antenna pathloss raster map</dd>
+
+<dt><b>input_dem</b>=<em>name</em>&nbsp;<b>[required]</b></dt>
+<dd>Name of elevation model raster map - required for transmitter height determination</dd>
+
+<dt><b>output</b>=<em>name</em>&nbsp;<b>[required]</b></dt>
+<dd>Name for output raster map</dd>
+
+<dt><b>east</b>=<em>float</em>&nbsp;<b>[required]</b></dt>
+<dd>Easting coordinate</dd>
+
+<dt><b>north</b>=<em>float</em>&nbsp;<b>[required]</b></dt>
+<dd>Northing coordinate</dd>
+
+<dt><b>radius</b>=<em>float</em></dt>
+<dd>Computation radius [km]</dd>
+<dd>Default: <em>10</em></dd>
+
+<dt><b>ant_data_file</b>=<em>string</em>&nbsp;<b>[required]</b></dt>
+<dd>Antenna data file</dd>
+
+<dt><b>height_agl</b>=<em>float</em>&nbsp;<b>[required]</b></dt>
+<dd>Above ground level height [m]</dd>
+
+<dt><b>beam_direction</b>=<em>integer</em>&nbsp;<b>[required]</b></dt>
+<dd>Beam direction [deg]</dd>
+
+<dt><b>mech_tilt</b>=<em>integer</em>&nbsp;<b>[required]</b></dt>
+<dd>Mechanical antenna tilt [deg]</dd>
+
+<dt><b>rx_ant_height</b>=<em>float</em></dt>
+<dd>Receiver antenna height [m]</dd>
+<dd>Default: <em>1.5</em></dd>
+
+</dl>
+</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+# Terrain type loss factors - hataDEM model - Ljubljana 5m, UMTS, 2011-11-03
+#    1 - Urban without buildings
+#    5 - Agricultural area
+#    6 - Forest
+#    7 - Swamp
+#    8 - Dry open land with a special plant cover
+#    9 - Open land without or with insignificant plant cover - urban
+#   10 - Water
+#   11 - Industrial area
+#   12 - Park
+#  101 - Urban under 10m
+#  102 - Urban 10m-20m
+#  103 - Urban 20m-30m
+#  104 - Urban 30m-40m
+#  105 - Urban 40m-50m
+#  106 - Urban nad 50m
+#  111 - Industrial pod 10m
+#  112 - Industrial 10m-20m
+#  113 - Industrial 20m-30m
+#  114 - Industrial 30m-40m
+#  115 - Industrial 40m-50m
+#  116 - Industrial over 50m
+
+1:3
+5:8
+6:23
+7:7
+8:8
+9:5
+10:1
+11:3
+12:8
+101:18
+102:21
+103:23
+104:25
+105:27
+106:28
+111:16
+112:19
+113:22
+114:24
+115:26
+116:27
+

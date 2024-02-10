@@ -1,0 +1,15 @@
+# Terrain type loss factors - hataDEM model - public RaPlaT distribution, 2013-02-05
+#  1 - irrigate agricu
+#  2 - range land
+#  3 - coniferous fores
+#  4 - deciduous forest
+#  5 - mixed forest
+#  6 - disturbed
+
+1:15.5
+2:15
+3:25
+4:20
+5:22
+6:21
+

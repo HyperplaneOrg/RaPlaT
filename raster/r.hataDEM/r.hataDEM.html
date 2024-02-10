@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>GRASS GIS manual: r.hataDEM</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="grassdocs.css" type="text/css">
+</head>
+<body bgcolor="white">
+<div id="container">
+
+<a href="index.html"><img src="grass_logo.png" alt="GRASS logo"></a>
+<hr class="header">
+
+<h2>NAME</h2>
+<em><b>r.hataDEM</b></em>  - RaPlaT - HataDEM module (v07dec2018)
+<h2>KEYWORDS</h2>
+<a href="raster.html">raster</a>, <a href="topic_hataDEM.html">hataDEM</a>
+<h2>SYNOPSIS</h2>
+<div id="name"><b>r.hataDEM</b><br></div>
+<b>r.hataDEM --help</b><br>
+<div id="synopsis"><b>r.hataDEM</b> [-<b>qi</b>] <b>input_dem</b>=<em>name</em>  [<b>clut_mode</b>=<em>string</em>]   [<b>clutter</b>=<em>name</em>]  <b>output</b>=<em>name</em> <b>a0</b>=<em>float</em> <b>a1</b>=<em>float</em> <b>a2</b>=<em>float</em> <b>a3</b>=<em>float</em> <b>coordinate</b>=<em>x,y</em>  [<b>radius</b>=<em>float</em>]   [<b>ant_height</b>=<em>float</em>]   [<b>rx_ant_height</b>=<em>float</em>]  <b>frequency</b>=<em>float</em>  [--<b>overwrite</b>]  [--<b>help</b>]  [--<b>verbose</b>]  [--<b>quiet</b>]  [--<b>ui</b>] 
+</div>
+
+<div id="flags">
+<h3>Flags:</h3>
+<dl>
+<dt><b>-q</b></dt>
+<dd>Quiet</dd>
+
+<dt><b>-i</b></dt>
+<dd>Inverse mode (RX and TX roles exchanged)</dd>
+
+<dt><b>--overwrite</b></dt>
+<dd>Allow output files to overwrite existing files</dd>
+<dt><b>--help</b></dt>
+<dd>Print usage summary</dd>
+<dt><b>--verbose</b></dt>
+<dd>Verbose module output</dd>
+<dt><b>--quiet</b></dt>
+<dd>Quiet module output</dd>
+<dt><b>--ui</b></dt>
+<dd>Force launching GUI dialog</dd>
+</dl>
+</div>
+
+<div id="parameters">
+<h3>Parameters:</h3>
+<dl>
+<dt><b>input_dem</b>=<em>name</em>&nbsp;<b>[required]</b></dt>
+<dd>Name of input raster map</dd>
+
+<dt><b>clut_mode</b>=<em>string</em></dt>
+<dd>Clutter usage</dd>
+<dd>Options: <em>rx, tx, none</em></dd>
+<dd>Default: <em>rx</em></dd>
+
+<dt><b>clutter</b>=<em>name</em></dt>
+<dd>Name of clutter raster map with path loss coefficients</dd>
+<dd>Default: <em></em></dd>
+
+<dt><b>output</b>=<em>name</em>&nbsp;<b>[required]</b></dt>
+<dd>Name for output raster map</dd>
+
+<dt><b>a0</b>=<em>float</em>&nbsp;<b>[required]</b></dt>
+<dd>Parameter a0</dd>
+
+<dt><b>a1</b>=<em>float</em>&nbsp;<b>[required]</b></dt>
+<dd>Parameter a1</dd>
+
+<dt><b>a2</b>=<em>float</em>&nbsp;<b>[required]</b></dt>
+<dd>Parameter a2</dd>
+
+<dt><b>a3</b>=<em>float</em>&nbsp;<b>[required]</b></dt>
+<dd>Parameter a3</dd>
+
+<dt><b>coordinate</b>=<em>x,y</em>&nbsp;<b>[required]</b></dt>
+<dd>Base station coordinates, or receiver location in inverse mode</dd>
+
+<dt><b>radius</b>=<em>float</em></dt>
+<dd>Computation radius [km]</dd>
+<dd>Default: <em>10</em></dd>
+
+<dt><b>ant_height</b>=<em>float</em></dt>
+<dd>Transmitter antenna height [m]</dd>
+<dd>Default: <em>10</em></dd>
+
+<dt><b>rx_ant_height</b>=<em>float</em></dt>
+<dd>Receiver antenna height [m]</dd>
+<dd>Default: <em>1.5</em></dd>
+
+<dt><b>frequency</b>=<em>float</em>&nbsp;<b>[required]</b></dt>
+<dd>Frequency [MHz]</dd>
+
+</dl>
+</div>
+</body>
+</html>

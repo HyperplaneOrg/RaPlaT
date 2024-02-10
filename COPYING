@@ -1,0 +1,33 @@
+Copyright and License Statement
+
+The Radio Planning Tool (RaPlaT) for GRASS GIS is Copyright
+by Jozef Stefan Institute (JSI).
+
+This program is free software; you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the
+Free Software Foundation; either version 2 of the License, or (at your
+option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License (GPL) for more details.
+
+Questions regarding RaPlaT should be directed to the RaPlaT 
+development team at JSI at the following address:
+
+ Jozef Stefan Institute (Department of Communication Systems E6)
+  attn: Igor Ozimek or Tomaž Javornik or Andrej Hrovat
+ Jamova 39 
+ 1000 Ljubljana
+ Slovenia
+
+ Email:
+  Igor Ozimek (igor.ozimek@ijs.si)
+  Tomaž Javornik (tomaz.javornik@ijs.si)
+  Andrej Hrovat (andrej.hrovat@ijs.si)
+
+ Internet:
+  https://www.ijs.si/ijsw/Communication%20Systems%20E6
+  http://e6.ijs.si/
+  http://www-e6.ijs.si/RaPlaT/GRASS-RaPlaT_main_page.htm

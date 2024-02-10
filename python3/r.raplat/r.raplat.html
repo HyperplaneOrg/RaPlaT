@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>GRASS GIS manual: r.raplat</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="grassdocs.css" type="text/css">
+</head>
+<body bgcolor="white">
+<div id="container">
+
+<a href="index.html"><img src="grass_logo.png" alt="GRASS logo"></a>
+<hr class="header">
+
+<h2>NAME</h2>
+<em><b>r.raplat</b></em>  - RaPlaT - raplat module (v30mar2023), RAdio PLanning Tool
+<h2>KEYWORDS</h2>
+<h2>SYNOPSIS</h2>
+<div id="name"><b>r.raplat</b><br></div>
+<b>r.raplat --help</b><br>
+<div id="synopsis"><b>r.raplat</b> [-<b>rpcx</b>] <b>csv_file</b>=<em>string</em>  [<b>antmap_file</b>=<em>string</em>]  <b>dem_map</b>=<em>string</em>  [<b>clutter_map</b>=<em>string</em>]   [<b>region</b>=<em>string</em>]   [<b>rx_ant_height</b>=<em>float</em>]   [<b>generate</b>=<em>string</em>]   [<b>bandwidth</b>=<em>float</em>]   [<b>rx_threshold</b>=<em>float</em>]  <b>out_map</b>=<em>string</em>  [<b>cellnum</b>=<em>integer</em>]   [<b>db_driver</b>=<em>string</em>]   [<b>database</b>=<em>string</em>]   [<b>out_table</b>=<em>string</em>]   [<b>dbperf</b>=<em>integer</em>]   [<b>procnum</b>=<em>integer</em>]   [<b>freq_ovr</b>=<em>float</em>]   [<b>radius_ovr</b>=<em>float</em>]   [<b>model_ovr</b>=<em>string</em>]   [--<b>overwrite</b>]  [--<b>help</b>]  [--<b>verbose</b>]  [--<b>quiet</b>]  [--<b>ui</b>] 
+</div>
+
+<div id="flags">
+<h3>Flags:</h3>
+<dl>
+<dt><b>-r</b></dt>
+<dd>Reuse results from existing intermediate model/sector files</dd>
+
+<dt><b>-p</b></dt>
+<dd>(purge) Delete all unused sector radio coverage files</dd>
+
+<dt><b>-c</b></dt>
+<dd>(check) Test run without actually performing radio coverage computation</dd>
+
+<dt><b>-x</b></dt>
+<dd>Write all maps (model/sector/output) also as xyz files (in the working directory)</dd>
+
+<dt><b>--overwrite</b></dt>
+<dd>Allow output files to overwrite existing files</dd>
+<dt><b>--help</b></dt>
+<dd>Print usage summary</dd>
+<dt><b>--verbose</b></dt>
+<dd>Verbose module output</dd>
+<dt><b>--quiet</b></dt>
+<dd>Quiet module output</dd>
+<dt><b>--ui</b></dt>
+<dd>Force launching GUI dialog</dd>
+</dl>
+</div>
+
+<div id="parameters">
+<h3>Parameters:</h3>
+<dl>
+<dt><b>csv_file</b>=<em>string</em>&nbsp;<b>[required]</b></dt>
+<dd>Radio cell/sector table in CSV format</dd>
+
+<dt><b>antmap_file</b>=<em>string</em></dt>
+<dd>Antennas map file</dd>
+<dd>Default: <em>$GISBASE/etc/radio_coverage/antenna_diagrams/antennamap.csv</em></dd>
+
+<dt><b>dem_map</b>=<em>string</em>&nbsp;<b>[required]</b></dt>
+<dd>DEM raster map for radio coverage simulation</dd>
+
+<dt><b>clutter_map</b>=<em>string</em></dt>
+<dd>Clutter raster map (required for HataDEM model)</dd>
+
+<dt><b>region</b>=<em>string</em></dt>
+<dd>Computation region (dem, current or region,raster,n,e,s,w,res (see g.region))</dd>
+<dd>Default: <em>current</em></dd>
+
+<dt><b>rx_ant_height</b>=<em>float</em></dt>
+<dd>Receiver antenna height [m]</dd>
+<dd>Default: <em>1.5</em></dd>
+
+<dt><b>generate</b>=<em>string</em></dt>
+<dd>Selection of the generated output contents</dd>
+<dd>Options: <em>rss-max, coverage, rss-sum, rss-maxix, lte-rssi, lte-rsrp, lte-rsrq, lte-cinr, lte-maxspecteff, lte-maxthrput, lte-interfere</em></dd>
+<dd>Default: <em>rss-max</em></dd>
+
+<dt><b>bandwidth</b>=<em>float</em></dt>
+<dd>Bandwidth [MHz]</dd>
+<dd>Default: <em>5</em></dd>
+
+<dt><b>rx_threshold</b>=<em>float</em></dt>
+<dd>Minimum received power [dBm] for radio signal coverage</dd>
+
+<dt><b>out_map</b>=<em>string</em>&nbsp;<b>[required]</b></dt>
+<dd>Simulated radio coverage - raster (output)</dd>
+<dd>Default: <em>out_raster</em></dd>
+
+<dt><b>cellnum</b>=<em>integer</em></dt>
+<dd>Number of succesive path loss values to be written in the table</dd>
+<dd>Default: <em>5</em></dd>
+
+<dt><b>db_driver</b>=<em>string</em></dt>
+<dd>Database driver</dd>
+<dd>Options: <em>none, dbf, mysql, pg, sqlite, csv</em></dd>
+<dd>Default: <em>none</em></dd>
+
+<dt><b>database</b>=<em>string</em></dt>
+<dd>Database name</dd>
+<dd>Default: <em>$GISDBASE/$LOCATION_NAME/$MAPSET/dbf</em></dd>
+
+<dt><b>out_table</b>=<em>string</em></dt>
+<dd>Simulated radio coverage - db table (output)</dd>
+<dd>Default: <em>out_db</em></dd>
+
+<dt><b>dbperf</b>=<em>integer</em></dt>
+<dd>Database insert performance (rows/INSERT; 99: special fast mode via CSV)</dd>
+<dd>Options: <em>1-99</em></dd>
+<dd>Default: <em>20</em></dd>
+
+<dt><b>procnum</b>=<em>integer</em></dt>
+<dd>Number of parallel processes (-1: automatic, 0: non-parallel)</dd>
+<dd>Default: <em>-1</em></dd>
+
+<dt><b>freq_ovr</b>=<em>float</em></dt>
+<dd>Radio frequency override [MHz]</dd>
+
+<dt><b>radius_ovr</b>=<em>float</em></dt>
+<dd>Radius override [km]</dd>
+
+<dt><b>model_ovr</b>=<em>string</em></dt>
+<dd>Model override (with parameters)</dd>
+
+</dl>
+</div>
+</body>
+</html>

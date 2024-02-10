@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>GRASS GIS manual: r.MaxPower</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="grassdocs.css" type="text/css">
+</head>
+<body bgcolor="white">
+<div id="container">
+
+<a href="index.html"><img src="grass_logo.png" alt="GRASS logo"></a>
+<hr class="header">
+
+<h2>NAME</h2>
+<em><b>r.MaxPower</b></em>  - RaPlaT - MaxPower module (v24mar2021)
+<h2>KEYWORDS</h2>
+<a href="raster.html">raster</a>, <a href="topic_MaxPower.html">MaxPower</a>
+<h2>SYNOPSIS</h2>
+<div id="name"><b>r.MaxPower</b><br></div>
+<b>r.MaxPower --help</b><br>
+<div id="synopsis"><b>r.MaxPower</b> [-<b>q</b>] <b>cell_input</b>=<em>string</em>  [<b>generate</b>=<em>string</em>]   [<b>rx_threshold</b>=<em>float</em>]   [<b>chan_type</b>=<em>string</em>]   [<b>bandwidth</b>=<em>float</em>]  <b>output</b>=<em>name</em>  [<b>table</b>=<em>string</em>]   [<b>driver</b>=<em>string</em>]   [<b>database</b>=<em>string</em>]   [<b>cell_num</b>=<em>integer</em>]   [<b>dbperf</b>=<em>integer</em>]   [--<b>overwrite</b>]  [--<b>help</b>]  [--<b>verbose</b>]  [--<b>quiet</b>]  [--<b>ui</b>] 
+</div>
+
+<div id="flags">
+<h3>Flags:</h3>
+<dl>
+<dt><b>-q</b></dt>
+<dd>Quiet</dd>
+
+<dt><b>--overwrite</b></dt>
+<dd>Allow output files to overwrite existing files</dd>
+<dt><b>--help</b></dt>
+<dd>Print usage summary</dd>
+<dt><b>--verbose</b></dt>
+<dd>Verbose module output</dd>
+<dt><b>--quiet</b></dt>
+<dd>Quiet module output</dd>
+<dt><b>--ui</b></dt>
+<dd>Force launching GUI dialog</dd>
+</dl>
+</div>
+
+<div id="parameters">
+<h3>Parameters:</h3>
+<dl>
+<dt><b>cell_input</b>=<em>string</em>&nbsp;<b>[required]</b></dt>
+<dd>Cells data table</dd>
+
+<dt><b>generate</b>=<em>string</em></dt>
+<dd>Selection of the generated output contents</dd>
+<dd>Options: <em>rss-max, coverage, rss-sum, rss-maxix, lte-rssi, lte-rsrp, lte-rsrq, lte-cinr, lte-maxspecteff, lte-maxthrput, lte-interfere</em></dd>
+<dd>Default: <em>rss-max</em></dd>
+
+<dt><b>rx_threshold</b>=<em>float</em></dt>
+<dd>Minimum received power [dBm] for radio signal coverage</dd>
+<dd>Default: <em>-999</em></dd>
+
+<dt><b>chan_type</b>=<em>string</em></dt>
+<dd>Channel type - Gaussian or Rayleigh (currently only Gaussian)</dd>
+<dd>Options: <em>gaussian</em></dd>
+<dd>Default: <em>gaussian</em></dd>
+
+<dt><b>bandwidth</b>=<em>float</em></dt>
+<dd>Bandwidth [MHz] (required for LTE computations)</dd>
+<dd>Default: <em>5</em></dd>
+
+<dt><b>output</b>=<em>name</em>&nbsp;<b>[required]</b></dt>
+<dd>Name for output raster map</dd>
+
+<dt><b>table</b>=<em>string</em></dt>
+<dd>Table name</dd>
+
+<dt><b>driver</b>=<em>string</em></dt>
+<dd>Driver name</dd>
+<dd>Options: <em>dbf, mysql, odbc, ogr, pg, sqlite, none, csv</em></dd>
+<dd>Default: <em>none</em></dd>
+
+<dt><b>database</b>=<em>string</em></dt>
+<dd>Database name</dd>
+<dd>Default: <em>$GISDBASE/$LOCATION_NAME/$MAPSET/dbf/</em></dd>
+
+<dt><b>cell_num</b>=<em>integer</em></dt>
+<dd>Number of successive path loss values to be written in the table</dd>
+<dd>Default: <em>5</em></dd>
+
+<dt><b>dbperf</b>=<em>integer</em></dt>
+<dd>Database insert performance (rows/INSERT; 99: special fast mode via CSV)</dd>
+<dd>Options: <em>1-99</em></dd>
+<dd>Default: <em>20</em></dd>
+
+</dl>
+</div>
+</body>
+</html>
