@@ -1,6 +1,6 @@
 # RaPlaT
 
-This code is a derivative of the Radio Planning Tool (RaPlaT) for GRASS GIS System.
+This code is a derivative of the Radio Planning Tool (RaPlaT) for the GRASS GIS System.
 See the original COPYING file for additional information on copyrights and credits.
 As of Feb 2024, a version of the original code can be found here:
 
@@ -129,3 +129,9 @@ Parameters:
       frequency   Frequency [MHz]
 GRASS : ~ >
 ```
+
+## The RaPlaT Extension Documents
+
+One can find the documents and manuals here:
+[https://github.com/HyperplaneOrg/RaPlaT/tree/master/docs](https://github.com/HyperplaneOrg/RaPlaT/tree/master/docs)
+
